@@ -54,7 +54,20 @@ end
   # GITHUB STUFF
   - add team members to github
   - clone once (see cloning instructions)
-  
+
+  ### Pushing
+  when you are ready to push to github
+  $ git add .
+  $ git commit -m 'what you did'
+  $ git pull origin master
+  // here you merge any conflicts...
+  // communicte with team about which changes to keep
+  // if you did have a conflict you need to commit again
+  $ git add .
+  $ git commit - m'merged conflict'
+  $ git push origin master
+  // tell everyone on your team you pushed to master
+
 
   
   ### Cloning

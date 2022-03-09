@@ -1,8 +1,8 @@
 # AS A GROUP
 
-- create rails app
-- create react app
-- add third party libs (axios, react-router-dom, faker, pry etc)
+1. create rails app
+2. create react app
+3. add third party libs (axios, react-router-dom, faker, pry etc)
 gemfile
 ```ruby
 group :development do
@@ -19,4 +19,23 @@ end
   $ yarn add react-router-dom@6
   ```
 
-  - add to github
+  4. create db and TEST!!!! 
+  5. add to github see github stuff (you could start to split up tasks here)
+
+  now we can think about BE/FE
+
+  # BACKEND
+  1. create models, and setup associations
+  2. migrate
+  3. !!!!TEST!!!! -> in console, or seeds.rb
+  4. controllers
+
+
+  
+  
+  
+  
+  # GITHUB STUFF
+  - add team members to github
+
+

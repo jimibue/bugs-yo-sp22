@@ -1,4 +1,4 @@
-# AS A GROUP
+# AS A GROUP PRE SATURDAY
 
 1. create rails app
 2. create react app
@@ -39,17 +39,38 @@ end
   # FRONTEND
   1. react/router: Pages and Routing/Nav
   2. create stub out react components
-  3. (data provider not needed)
+  3. setup proxy in package json
+  4. (data provider not needed)
   > you don't have to use a provider if you don't want to
+  **stop here**
   
+
+  # SATURDAY
   
 
 
-  
-  
   
   
   # GITHUB STUFF
   - add team members to github
+  - clone once (see cloning instructions)
+  
+
+  
+  ### Cloning
+  ```
+  // in week-x dir
+  $ git clone <ssh-link> 
+  $ cd project-name
+  // install packages
+  $ bundle
+  $ rails db:create db:migrate db:seed
+  $ rails s -p 3001
+  
+  //in another pane in terminal (cntr-d)
+  $ cd client
+  $ yarn
+  $ yarn start
+  ```
 
 

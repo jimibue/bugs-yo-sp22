@@ -38,8 +38,10 @@ end
 
   # FRONTEND
   1. react/router: Pages and Routing/Nav
-    
   2. create stub out react components
+  3. (data provider not needed)
+  > you don't have to use a provider if you don't want to
+  
   
 
 

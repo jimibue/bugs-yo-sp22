@@ -28,7 +28,19 @@ end
   1. create models, and setup associations
   2. migrate
   3. !!!!TEST!!!! -> in console, or seeds.rb
-  4. controllers
+  4. create controllers and routes
+  5. !!Test!!! -/ rails/info/routes
+  **could maybe split up work here ( push/pull to github )**\
+  **or could stop here and go to frontend setup**
+  6. start filling out controllers
+  7. !!!test!!! in postman
+  8. push github have everyone pull from github
+
+  # FRONTEND
+  1. react/router: Pages and Routing/Nav
+    
+  2. create stub out react components
+  
 
 
   

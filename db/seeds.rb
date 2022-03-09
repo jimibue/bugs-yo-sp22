@@ -15,5 +15,5 @@ b1.treatments.create(name:'J&J', success_rate:70)
 b2.treatments.create(name:'Penicillin', success_rate:50)
 b2.treatments.create(name:'Sleep', success_rate:80)
 
-puts "BUGS: #{Bug.all.size}"
-puts "TREAMENTS: #{Treatment.all.size}"
+puts "BUGS: #{Bug.all.count}"
+puts "TREAMENTS: #{Treatment.all.count}"

@@ -52,8 +52,11 @@ end
   
   
   # GITHUB STUFF
+  - have team members clone once (see cloning instructions)
   - add team members to github
-  - clone once (see cloning instructions)
+    - repo settings > collabators > add
+  - team members need to confirm add in email.
+  - everyone should be able to push and pull to github(be careful!)
 
   ### Pushing
   ```

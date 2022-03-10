@@ -1,16 +1,52 @@
-import React from 'react'
-import { useParams, useLocation } from 'react-router-dom'
+import axios from "axios";
+import React, { useState } from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 
-const BugForm = ()=>{
-    const params = useParams()
-    const location = useLocation()
-    return (
-        <div>
-            <h1>{params.id ? 'Edit' :'New'} BugForm</h1>
-            <p>id: {params.id ? params.id :'no id' }</p>
-            <p>{JSON.stringify(location)}</p>
-        </div>
-    )
-}
+const BugForm = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [name, setName] = useState(location.state ? location.state.name : "");
+  const [bug_type, set_bug_type] = useState(
+    location.state ? location.state.bug_type : ""
+  );
+  const params = useParams();
 
-export default BugForm
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      if (params.id) {
+        await axios.put(`/api/bugs/${params.id}`, {
+          name,
+          bug_type,
+          id: params.id,
+        });
+      } else {
+        await axios.post(`/api/bugs`, { name, bug_type });
+      }
+      // when bug has been updated
+      navigate("/bugs");
+    } catch (err) {
+      alert("err");
+    }
+  };
+  return (
+    <div>
+      <h1>{params.id ? "Edit" : "New"} BugForm</h1>
+      <form onSubmit={handleSubmit}>
+        <p>name</p>
+        <input value={name} onChange={(e) => setName(e.target.value)} />
+        <p>bug type</p>
+        <input
+          value={bug_type}
+          onChange={(e) => set_bug_type(e.target.value)}
+        />
+        <button>{params.id ? "Update" : "Create"}</button>
+      </form>
+
+      <p>id: {params.id ? params.id : "no id"}</p>
+      <p>{JSON.stringify(location.state)}</p>
+    </div>
+  );
+};
+
+export default BugForm;

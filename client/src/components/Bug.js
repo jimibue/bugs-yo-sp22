@@ -1,17 +1,20 @@
+import axios from "axios";
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 
 const Bug = (props) => {
   const navigate = useNavigate();
-  const { name, id, bug_type } = props;
+  const { name, id, bug_type, deleteBug} = props;
+
+
   return (
     <div className="border">
-      <h1>Bug</h1>
+      <h1 style={{fontSize:'46px'}}>Bug</h1>
       <p>id: {id}</p>
       <p>name: {name}</p>
       <p>bug_type: {bug_type}</p>
       <Link to={`/bugs/${id}`}>show</Link>
-      <button>delete</button>
+      <button onClick={() => deleteBug(id)}>delete</button>
       <button
         onClick={() =>
           navigate(`/bugs/${id}/edit`, { state: { name, id, bug_type } })

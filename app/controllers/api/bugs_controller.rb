@@ -1,4 +1,5 @@
 class Api::BugsController < ApplicationController
+    # PRETENT THIS WAS JUST DONE AS WELLL
     before_action :set_bug, only: [:update, :show, :destroy, :bugs_all]
     
     def index

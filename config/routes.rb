@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     resources :bugs do
       resources :treatments
     end
+
+
+  
   end
 end

@@ -36,6 +36,7 @@ end
   7. !!!test!!! in postman
   8. push github have everyone pull from github
 
+
   # FRONTEND
   1. react/router: Pages and Routing/Nav
   2. create stub out react components
@@ -46,6 +47,12 @@ end
   
 
   # SATURDAY
+  # IF YOU WANT DIVIDE AND CONQUER (YOU CAN STILL AS A GROUP)
+
+  # BACKEND
+  6. start filling out controllers
+  7. !!!test!!! in postman
+  8. push github have everyone pull from github
   
 
 

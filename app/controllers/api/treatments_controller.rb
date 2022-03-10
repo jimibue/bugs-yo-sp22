@@ -5,8 +5,6 @@ class Api::TreatmentsController < ApplicationController
     # get 'api/bugs/:bug_id/treatments''
     # let res = await axios.get('/api/bugs/1/treatments')
     def index
-        # find bug
-        @bug = Bug.find(params[:bug_id])
         render json:  @bug.treatments
     end
 

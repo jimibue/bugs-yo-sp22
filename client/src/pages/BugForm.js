@@ -1,8 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { DataContext } from "../providers/DataProvider";
 
 const BugForm = () => {
+    const {addBug} = useContext(DataContext)
   const navigate = useNavigate();
   const location = useLocation();
   const [name, setName] = useState(location.state ? location.state.name : "");
@@ -21,7 +23,10 @@ const BugForm = () => {
           id: params.id,
         });
       } else {
-        await axios.post(`/api/bugs`, { name, bug_type });
+        let res = await axios.post(`/api/bugs`, { name, bug_type });
+        console.log('res.data:', res.data)
+        // what does res.data  = {id, name,bug_type,.. }
+        addBug(res.data)
       }
       // when bug has been updated
       navigate("/bugs");

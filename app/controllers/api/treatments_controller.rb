@@ -1,11 +1,15 @@
 class Api::TreatmentsController < ApplicationController
-    before_action :set_bug
+    before_action :set_bug, except: [:treatments_all]
     before_action :set_treatment, only:[:show, :update, :destroy]
     # give me all treaments of specific bug
     # get 'api/bugs/:bug_id/treatments''
     # let res = await axios.get('/api/bugs/1/treatments')
     def index
-        render json:  @bug.treatments
+        render json: @bug.treatments
+    end
+
+    def treatments_all
+        render json: Treatment.all
     end
 
     # get on treatment of specific bug

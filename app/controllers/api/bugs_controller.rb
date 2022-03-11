@@ -1,6 +1,15 @@
 class Api::BugsController < ApplicationController
     # PRETENT THIS WAS JUST DONE AS WELLL. BY SALLY
     before_action :set_bug, only: [:update, :show, :destroy, :bugs_all]
+
+    def all
+      bugs = Bug.all
+      # better way to do this with sql
+      bug_data = bugs.map do |bug|
+        {bug: bug, treatments: bug.treatments}
+      end
+      render json: bug_data
+    end
     
     def index
       render json: Bug.all

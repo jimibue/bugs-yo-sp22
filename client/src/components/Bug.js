@@ -13,7 +13,7 @@ const Bug = (props) => {
       <p>id: {id}</p>
       <p>name: {name}</p>
       <p>bug_type: {bug_type}</p>
-      <Link to={`/bugs/${id}`}>show</Link>
+      <Link to={ `/bugs/${id}`}  state={{name, id, bug_type}}>show</Link>
       <button onClick={() => deleteBug(id)}>delete</button>
       <button
         onClick={() =>

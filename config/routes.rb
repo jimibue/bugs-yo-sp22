@@ -3,10 +3,13 @@ Rails.application.routes.draw do
   namespace :api do
     # nested routing
 
-    # {bug: {bugData}, treatments: [treatements]}
+    # {bug: {bugData}, treatments: [treatments]}
+    get 'all', to: 'bugs#all'
     get 'bugs_all/:id', to: 'bugs#bugs_all'
+    get 'treatments',  to:'treatments#treatments_all'
     resources :bugs do
       resources :treatments
+
     end
 
 

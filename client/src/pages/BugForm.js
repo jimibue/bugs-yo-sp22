@@ -26,6 +26,7 @@ const BugForm = () => {
         let res = await axios.post(`/api/bugs`, { name, bug_type });
         console.log('res.data:', res.data)
         // what does res.data  = {id, name,bug_type,.. }
+        // add to provider
         addBug(res.data)
       }
       // when bug has been updated
